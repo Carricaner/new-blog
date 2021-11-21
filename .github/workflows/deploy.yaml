@@ -14,12 +14,12 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v2
-
-      - name: npm install
+      - name: generate a test file
+        run: echo "sth" >> test.txt
+      - name : push to repo
         run: |
-          npm install
-
-      - name: build
-        run: |
-          npm run build
-          
+          git config --global user.name "Darren Li"
+          git config --global user.email "darren@easychat.co"
+          git add test.txt
+          git commit -m "github actions test push"
+          git push
