@@ -14,6 +14,12 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v2
-      - name: print
+
+      - name: npm install
         run: |
-          echo Hello world!
+          npm install
+
+      - name: build
+        run: |
+          npm run build
+          
