@@ -26,6 +26,5 @@ jobs:
           git add -f -- _site/
           git config --global user.name "Darren Li"
           git config --global user.email "darren@easychat.co"
-          git add test.txt
           git commit -m "github actions test push"
           git push
